@@ -1,0 +1,24 @@
+ nav{
+  z-index: 10;
+ }
+  .menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #1d1b1b;
+    position: absolute;
+    bottom: -.25rem;
+    left: 0;
+    transition: width .4s;
+  }
+  
+  .menu__link:hover::before {
+    width: 100%;
+  }
+
+  .menu{
+    background-color: rgba(255, 255, 255, 0.365);
+    backdrop-filter: blur(10px);
+  }
+

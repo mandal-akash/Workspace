@@ -1,46 +1,178 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import pic from "../../../public/Images/pic (2).png";
 import pic2 from "../../../public/Images/hero.png";
-import { FaDiscord } from "react-icons/fa";
-import { FaFigma } from "react-icons/fa";
-import { SiIbm } from "react-icons/si";
-import { FaGoogle } from "react-icons/fa";
+import logo1 from "../../../public/partner_logo/partner_Logo (1).png";
+import logo2 from "../../../public/partner_logo/partner_Logo (2).png";
+import logo3 from "../../../public/partner_logo/partner_Logo (3).png";
+import logo4 from "../../../public/partner_logo/partner_Logo (4).png";
+import logo5 from "../../../public/partner_logo/partner_Logo (5).png";
+import "../Hero/style.css";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import LocomotiveScroll from "locomotive-scroll";
+
 const Hero = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const scroll = new LocomotiveScroll({
+    smooth: true,
+    lurp: 0.0001,
+  });
+
+  let timeLine = gsap.timeline();
+  useGSAP(() => {
+
+
+    timeLine.from(".section_1",{
+      y: 200,
+      opacity: 0,
+      duration: 2,
+      delay: 0.5,
+      ease: "back",
+
+    });
+    gsap.from(".section_1 button", {
+      y: 150,
+      opacity: 0,
+      duration: 2,
+      delay: 0.5,
+      ease: "back",
+    });
+    gsap.from(".section_1 img", {
+      y: 150,
+      opacity: 0,
+      duration: 2,
+      delay: 0.5,
+    });
+
+    // timeLine.from(".section_1 .socialPartner", {
+    //   opacity: 0,
+    //   x: -70,
+    //   stagger: 0.15,
+    // });
+    timeLine.from(".section_3", {
+      y: 200,
+      opacity: 0,
+      duration: 2,
+      ease: "back",
+      scrollTrigger: {
+        trigger: ".section_3",
+        scroller: "body",
+        scrub: 2,
+        start: "top 120%",
+        end: "top 0%",
+      },
+    });
+
+    timeLine.from(".box1", {
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".box1",
+        scroller: "body",
+        scrub: 2,
+      },
+    });
+    timeLine.from(".box2", {
+      x: 200,
+      opacity: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".box2",
+        scroller: "body",
+        scrub: 2,
+      },
+    });
+    timeLine.from(".box3", {
+      x: -200,
+      opacity: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".box3",
+        scroller: "body",
+        scrub: 2,
+      },
+    });
+    timeLine.from(".box4", {
+      x: 200,
+      opacity: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".box4",
+        scroller: "body",
+        scrub: 2,
+      },
+    });
+    timeLine.from(".section_5", {
+      y: 200,
+      opacity: 0,
+      duration: 2,
+      delay:2,
+      ease: "back",
+      scrollTrigger: {
+        trigger: ".section_5",
+        scroller: "body",
+        scrub: 2,
+      },
+    });
+    timeLine.from(".section_6", {
+      y: 200,
+      opacity: 0,
+      duration: 2,
+      delay:2,
+      ease: "back",
+      scrollTrigger: {
+        trigger: ".section_6",
+        scroller: "body",
+        scrub: 2,
+      },
+    });
+  });
   return (
-    <div className="">
-      <div className="flex flex-col my-8 items-center lg:flex-row justify-around">
-        <div className="text-center space-y-14">
-          <h1 className="text-4xl font-bold text-neutral-800 md:text-5xl lg:text-8xl">
-            Streamline Your Tasks,{" "}
-            <span className="text-purple-600">Simplify Your Day</span>
-          </h1>
-          <button className="getSarted border rounded-sm text-center py-2 px-3.5 border-purple-800  text-purple-800 hover:border-2 lg:text-4xl">
-            Get Started
-          </button>
-        </div>
-        <img src={pic} alt="" className="my-6 w-[70vw] lg:w-[30vw]" />
+    <div className="container">
+     <iv className="section_1 h-[93vh] w-[98.5vw] mx-1 px-2.5 py-6 flex flex-col items-center lg:flex-row lg:px-4">
+  <div className="text-left space-y-8">
+    <h1 className="heading_1 text-5xl font-semibold text-neutral-500 lg:text-[105px]">
+      Streamline Your Tasks, <span className="text-purple-600">Simplify Your Day</span>
+    </h1>
+    <button className="cssbuttons-io-button bg-purple-600 text-white pl-4 pr-20 rounded-lg flex items-center overflow-hidden relative text-xl h-14 shadow-md lg:ml-4 lg:text-xl">
+      Get started
+      <div className="icon bg-white ml-4 absolute flex items-center justify-center h-[2.1em] w-[2.1em] rounded-[0.7em] shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] right-[0.3em] transition-all duration-300">
+        <svg
+          height="24"
+          width="24"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+            fill="currentColor"
+          ></path>
+        </svg>
       </div>
-      <div className="grid grid-cols-2 mx-4 gap-4 py-6 lg:flex justify-around">
-        <div className="flex text-3xl space-x-2 font-bold text-gray-500 mx-4 my-4 lg:text-5xl">
-          <FaDiscord />
-          <p>Discord</p>
-        </div>
-        <div className="flex text-3xl space-x-2 font-bold text-gray-500 mx-4 my-4 lg:text-5xl">
-          <FaFigma />
-          <p>Figma</p>
-        </div>
-        <div className="flex text-3xl space-x-2 font-bold text-gray-500 mx-4 my-4 lg:text-5xl">
-          <SiIbm />
-          <p>IBM</p>
-        </div>
-        <div className="flex text-3xl space-x-2 font-bold text-gray-500 mx-4 my-4 lg:text-5xl">
-          <FaGoogle />
-          <p>Google</p>
-        </div>
+    </button>
+    <div className="socialPartner space-y-1.5 lg:px-4 lg:pt-8">
+      <p className="text-gray-500 font-semibold text-lg lg:text-2xl">
+        Trusted by teams at
+      </p>
+      <div className="flex items-center space-x-4 lg:space-x-10">
+        <img src={logo1} alt="Logo 1" className="w-[10vw] mr-3 lg:w-[4vw] lg:my-4" />
+        <img src={logo2} alt="Logo 2" className="w-[10vw] mx-2 lg:w-[5vw] lg:m-4" />
+        <img src={logo3} alt="Logo 3" className="w-[20vw] mx-2 lg:w-[6vw] lg:m-4" />
+        <img src={logo4} alt="Logo 4" className="w-[10vw] mx-2 lg:w-[5vw] lg:m-4" />
+        <img src={logo5} alt="Logo 5" className="w-[10vw] mx-2 lg:w-[4vw] lg:m-4" />
       </div>
-      <div className="my-10">
-        <div className="text-center space-y-4 max-w-[80vw] mx-auto">
-          <h1 className="text-5xl  text-neutral-700 lg:text-6xl">
+    </div>
+  </div>
+  <img src={pic} alt="Header" className="headerImg w-[65vw]  lg:w-[38vw]" />
+</iv>
+
+      <div className="section_3 my-10">
+        <div className="section_3Heading text-center space-y-4 max-w-[80vw] mx-auto">
+          <h1 className=" text-5xl  text-neutral-700 lg:text-6xl">
             Everything in one place
           </h1>
           <p className="font-sans text-lg text-gray-400 lg:text-xl">
@@ -50,57 +182,90 @@ const Hero = () => {
         <img
           src={pic2}
           alt=""
-          className="w-[80vw] m-auto my-12 border shadow-md border-gray-400 lg:w-[50vw]"
+          className="serviceImg w-[80vw] m-auto my-12 border shadow-md border-gray-400 lg:w-[50vw]"
         />
       </div>
-      <div className="space-y-12 my-10 ">
-        <div className="Box1 max-w-[80vw] mx-auto lg:flex justify-center items-center lg:space-x-10">
-          <div className=" text-center  space-y-4 space-x-2 my-4">
-            <h1 className="text-4xl font-bold lg:text-6xl">In-Depth Project Planning</h1>
+      <div className="section_4 space-y-12 my-10 overflow-hidden">
+        <div className="box box1 flex flex-col items-center lg:flex-row">
+          <div className="testimonalsLeft text-left space-y-4 my-4 mx-4 lg:max-w-[50vw] lg:mx-auto">
+            <h1 className="text-4xl font-bold lg:text-6xl">
+              In-Depth Project Planning
+            </h1>
             <p className="text-gray-500 text-xl lg:text-3xl">
               Prioritize tasks for the whole team from one central place, manage
               all resources, set clear goals, and control costs.
             </p>
-            <span className="text-purple-600  text-lg lg:text-2xl">Learn More -</span>
+            <span className="text-purple-600   text-lg lg:text-2xl">
+              Learn More -
+            </span>
           </div>
-          <img className="" src="https://www.ntaskmanager.com/wp-content/uploads/2022/01/homeProject3.png" alt="" />
+          <img
+            className="testimonalsRight mr-2  lg:w-[35vw]"
+            src="https://www.ntaskmanager.com/wp-content/uploads/2022/01/homeProject3.png"
+            alt=""
+          />
         </div>
-        <div className="Box2 max-w-[78vw] mx-auto lg:flex flex-row-reverse justify-center items-center lg:space-x-10">
-          <div className=" text-center space-y-4 space-x-2 my-4">
-            <h1 className="text-4xl font-bold lg:text-6xl">Crystal-clear Project Updates</h1>
+        <div className="box box2 flex flex-col items-center lg:flex-row-reverse space-x-16">
+          <div className=" testimonalsLeft text-left space-y-4 my-4 mx-4 lg:max-w-[60vw] lg:ml-24">
+            <h1 className="text-4xl font-bold lg:text-6xl">
+              Crystal-clear Project Updates
+            </h1>
             <p className="text-gray-500 text-xl lg:text-3xl">
-            Design your own workflows, set task reminders, use predefined templates, or make your own, without limits.
+              Design your own workflows, set task reminders, use predefined
+              templates, or make your own, without limits.
             </p>
-            <span className="text-purple-600 text-lg lg:text-2xl">Learn More -</span>
+            <span className="text-purple-600 text-lg lg:text-2xl">
+              Learn More -
+            </span>
           </div>
-          <img className="" src="https://www.ntaskmanager.com/wp-content/uploads/2022/03/MicrosoftTeams-image-1.png" alt="" />
+          <img
+            className="testimonalsRight  lg:w-[35vw]"
+            src="https://www.ntaskmanager.com/wp-content/uploads/2022/03/MicrosoftTeams-image-1.png"
+            alt=""
+          />
         </div>
-        <div className="Box3 max-w-[78vw] mx-auto lg:flex justify-center items-center lg:space-x-10">
-          <div className=" text-center space-y-4 space-x-2">
+        <div className="box box3 flex flex-col items-center lg:flex-row">
+          <div className="testimonalsLeft text-left space-y-4 my-4 mx-4 lg:max-w-[50vw] lg:mx-auto">
             <h1 className="text-4xl font-bold lg:text-6xl">Track Time Spent</h1>
             <p className="text-gray-500 text-xl lg:text-3xl">
-            Log time spent on projects, mark time as billable or non-billable, know exactly how your team is spending time.
+              Log time spent on projects, mark time as billable or non-billable,
+              know exactly how your team is spending time.
             </p>
-            <span className="text-purple-600 text-lg lg:text-2xl">Learn More -</span>
+            <span className="text-purple-600 text-lg lg:text-2xl">
+              Learn More -
+            </span>
           </div>
-          <img className="" src="https://www.ntaskmanager.com/wp-content/uploads/2022/03/MicrosoftTeams-image-3.png" alt="" />
+          <img
+            className="testimonalsRight lg:w-[35vw]"
+            src="https://www.ntaskmanager.com/wp-content/uploads/2022/03/MicrosoftTeams-image-3.png"
+            alt=""
+          />
         </div>
-        <div className="Box4 max-w-[78vw] mx-auto lg:flex flex-row-reverse justify-center items-center lg:space-x-10">
-          <div className=" text-center space-y-4 space-x-2">
-            <h1 className="text-4xl font-bold lg:text-6xl">Less Meetings, Better Meetings</h1>
+        <div className="box box4 flex flex-col items-center lg:flex-row-reverse space-x-16">
+          <div className="testimonalsLeft text-left space-y-4 my-4 mx-4 lg:max-w-[80vw] lg:ml-24">
+            <h1 className="text-4xl font-bold lg:text-6xl">
+              Less Meetings, Better Meetings
+            </h1>
             <p className="text-gray-500 text-xl lg:text-3xl">
-            Have clear agendas, use any calendar platform, manage meeting outcomes like a pro.
+              Have clear agendas, use any calendar platform, manage meeting
+              outcomes like a pro.
             </p>
-            <span className="text-purple-600 text-lg lg:text-2xl">Learn More -</span>
+            <span className="text-purple-600 text-lg lg:text-2xl">
+              Learn More -
+            </span>
           </div>
-          <img className="" src="https://www.ntaskmanager.com/wp-content/uploads/2022/03/MicrosoftTeams-image-4.png" alt="" />
+          <img
+            className="testimonalsRight lg:w-[35vw]"
+            src="https://www.ntaskmanager.com/wp-content/uploads/2022/03/MicrosoftTeams-image-4.png"
+            alt=""
+          />
         </div>
       </div>
-      <div className="">
+      <div className="section_5">
         <h1 className="text-3xl text-center text-neutral-700 lg:text-5xl">
           Trusted by 500+ teams
         </h1>
-        <div className="m-8 space-y-12 lg:grid grid-cols-3 gap-4 ">
+        <div className="m-8 space-y-12 lg:grid grid-cols-3 gap-4">
           <div className="border shadow-md border-gray-300  rounded-2xl text-lg p-2.5 space-y-6">
             <p>
               Workspace is an intuitive to-do{" "}
@@ -187,12 +352,31 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center text-center space-y-3 my-10 max-w-[75vw] mx-auto">
-        <h1  className="text-5 xl  text-neutral-600">Get Started for free.</h1>
-        <p className="text-lg text-gray-500">Play around with it first. <span className="underline">Pay and add your team later.</span></p>
-        <button className=" getSarted border text-2xl my-8 rounded-sm text-center py-2 px-3.5 border-purple-800  text-purple-800 hover:border-2 lg:text-4xl">
-            Get Started
-          </button>
+      <div className="section_6 rounded-md flex flex-col justify-center items-center text-center space-y-3 my-10 max-w-[85vw] mx-auto">
+        <h1 className="text-4xl  text-neutral-600 lg:text-5xl">
+          Get Started for free.
+        </h1>
+        <p className="text-lg text-gray-500">
+          Play around with it first.{" "}
+          <span className="underline">Pay and add your team later.</span>
+        </p>
+        <button className="cssbuttons-io-button bg-purple-600 text-white pl-4 pr-20  rounded-lg flex items-center overflow-hidden relative text-xl h-14  shadow-md lg:ml-4  lg:text-xl">
+          Get started
+          <div className="icon  bg-white ml-4 absolute flex items-center justify-center h-[2.1em] w-[2.1em] rounded-[0.7em] shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] right-[0.3em] transition-all duration-300">
+            <svg
+              height="24"
+              width="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+        </button>
       </div>
     </div>
   );

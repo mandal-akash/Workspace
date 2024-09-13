@@ -1,0 +1,62 @@
+<div className="section_1  flex h-[100vh] border-black w-[100vw] border justify-center flex-col  items-center space-y-4 lg:flex-row lg:items-center">
+  <div className="text-left space-y-8 mx-4">
+    <h1 className="heading_1 text-5xl font-semibold  text-neutral-500 lg:text-8xl">
+      Streamline Your Tasks,{" "}
+      <span className="text-purple-600">Simplify Your Day</span>
+    </h1>
+    <button className="cssbuttons-io-button  bg-purple-600 text-white pl-4 pr-20  rounded-lg flex items-center overflow-hidden relative text-xl h-14  shadow-md lg:ml-4  lg:text-xl">
+      Get started
+      <div className="icon  bg-white ml-4 absolute flex items-center justify-center h-[2.1em] w-[2.1em] rounded-[0.7em] shadow-[0.1em_0.1em_0.6em_0.2em_#7b52b9] right-[0.3em] transition-all duration-300">
+        <svg
+          height="24"
+          width="24"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+    </button>
+    <div className="socialPartner space-y-1.5">
+      <p className=" text-gray-400 mx-2 lg:text-xl">
+        Trusted by teams at
+      </p>
+      <div className="flex items-center space-y-4">
+        <img
+          src={logo1}
+          alt=""
+          className="w-[10vw] mr-3   lg:w-[3vw] lg:mr-6"
+        />
+
+        <img
+          src={logo2}
+          alt=""
+          className="w-[10vw] mx-2   lg:w-[4vw] lg:mx-4"
+        />
+
+        <img
+          src={logo3}
+          alt=""
+          className="w-[20vw] mx-2  lg:w-[5vw] lg:mx-4"
+        />
+
+        <img
+          src={logo4}
+          alt=""
+          className="w-[10vw] mx-2   lg:w-[4vw] lg:mx-4"
+        />
+
+        <img
+          src={logo5}
+          alt=""
+          className="w-[10vw] mx-2   lg:w-[3vw] lg:mx-4"
+        />
+      </div>
+    </div>
+  </div>
+  <img src={pic} alt="" className="headerImg mt-8 w-[60vw] lg:w-[35vw]" />
+</div>

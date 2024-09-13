@@ -1,14 +1,17 @@
-import Header from "../src/components/Header/Header";
-import Hero from "../src/components/Hero/Hero";
-import Footer from "../src/components/Footer/Footer";
 import "./App.css";
+import Navbar from "../src/components/Navbar/Navbar";
+import Sidebar from "../src/components/Sidebar/Sidebar";
+import FrontSection from "./components/FrontSection";
 
 function App() {
+
   return (
-    <div className="">
-      <Header />
-      <Hero/>
-      <Footer/>
+    <div className="App">
+      <FrontSection/>
+      {/* <div className="flex w-screen">
+        <Sidebar />
+        <Navbar />
+      </div> */}
     </div>
   );
 }
