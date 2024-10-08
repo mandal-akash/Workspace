@@ -5,17 +5,15 @@ import { MdOutlineInsertComment } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 const Navbar = () => {
   return (
-    <nav className="p-2.5 h-[7vh] w-screen">
+    <nav className="p-1.5 h-[7vh]  m-1 flex-[4] lg:m-0.5">
       <div className="flex justify-between items-center">
-      
         <div className="flex items-center space-x-4">
-        <span className="text-2xl lg:hidden"><RxHamburgerMenu /></span>
           <h1 className="text-2xl text-neutral-500">Untitled</h1>
         </div>
-        <div className="text-2xl text-neutral-500 flex space-x-4">
-          <CiClock1 />
-          <FaRegStar />
-          <MdOutlineInsertComment />
+        <div className="text-xl text-neutral-700 flex lg:text-2xl">
+          <span className=" p-2 hover:bg-gray-200 hover:cursor-pointer rounded-full"><CiClock1 /></span>
+          <span  className=" p-2 hover:bg-gray-200 hover:cursor-pointer rounded-full"><FaRegStar /></span>
+          <span  className=" p-2 hover:bg-gray-200 hover:cursor-pointer rounded-full"><MdOutlineInsertComment /></span>
         </div>
       </div>
     </nav>

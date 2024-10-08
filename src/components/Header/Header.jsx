@@ -10,7 +10,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(true);
 
   let timeLine = gsap.timeline();
   let timeLine2 = gsap.timeline({paused :true});
