@@ -1,0 +1,16 @@
+{
+  "name": "workspace_backend",
+  "version": "1.0.0",
+  "description": "This is workspace backend.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "workspace@author",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  }
+}

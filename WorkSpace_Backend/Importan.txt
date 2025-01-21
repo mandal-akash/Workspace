@@ -1,0 +1,4 @@
+akashkumar26858 : UserName
+xH0JiqqzeDYZBE6a : Password
+
+mongodb+srv://akashkumar26858:<db_password>@cluster0.mty6p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
